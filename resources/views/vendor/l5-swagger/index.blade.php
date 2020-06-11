@@ -83,7 +83,7 @@ window.onload = function() {
     requestInterceptor: function() {
       this.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
       this.headers['Access-Control-Allow-Origin'] = '*';
-      this.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
+      this.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, api_key, Authorization';
       return this;
     },
 
