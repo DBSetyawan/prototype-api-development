@@ -74,7 +74,6 @@ window.onload = function() {
   // Build a system
   const ui = SwaggerUIBundle({
     dom_id: '#swagger-ui',
-    enableCORS: false,
     url: "{!! $urlToDocs !!}",
     operationsSorter: {!! isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' !!},
     configUrl: {!! isset($configUrl) ? '"' . $configUrl . '"' : 'null' !!},
@@ -83,6 +82,8 @@ window.onload = function() {
 
     requestInterceptor: function() {
       this.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
+      this.headers['Access-Control-Allow-Origin'] = '*';
+      this.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
       return this;
     },
 
