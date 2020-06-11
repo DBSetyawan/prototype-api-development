@@ -74,7 +74,6 @@ window.onload = function() {
   // Build a system
   const ui = SwaggerUIBundle({
     dom_id: '#swagger-ui',
-    enableCORS: true,
     url: "{!! $urlToDocs !!}",
     operationsSorter: {!! isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' !!},
     configUrl: {!! isset($configUrl) ? '"' . $configUrl . '"' : 'null' !!},
