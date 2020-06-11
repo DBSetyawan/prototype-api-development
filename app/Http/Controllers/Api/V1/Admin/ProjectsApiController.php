@@ -109,7 +109,7 @@ class ProjectsApiController extends Controller
      *          response=403,
      *          description="Forbidden"
      *      ),
-     *          security={{"passport": {"*"}},
+     *        security={{"passport": {"*"}},
      *     },
      * )
      */
@@ -160,7 +160,9 @@ class ProjectsApiController extends Controller
      *      @OA\Response(
      *          response=404,
      *          description="Resource Not Found"
-     *      )
+     *      ),
+     *         security={{"passport": {"*"}},
+     *     },
      * )
      */
     public function update(UpdateProjectRequest $request, Project $project)
