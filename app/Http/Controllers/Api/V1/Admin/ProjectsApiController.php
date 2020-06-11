@@ -80,13 +80,14 @@ class ProjectsApiController extends Controller
             ->setStatusCode(Response::HTTP_CREATED);
     }
 
-    /**
+
+     /**
      * @OA\Get(
      *      path="/api/v1/projects/{id}",
-     *      operationId="getProjectById",
+     *      operationId="getProjectsList",
      *      tags={"Projects"},
-     *      summary="Get project information",
-     *      description="Returns project data",
+     *      summary="Get projects information",
+     *      description="Returns projects data",
      *      @OA\Parameter(
      *          name="id",
      *          description="Project id",
@@ -96,26 +97,14 @@ class ProjectsApiController extends Controller
      *              type="integer"
      *          )
      *      ),
-     *       @OA\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
      *          @OA\JsonContent(ref="#/components/schemas/Project")
      *       ),
      *       security={{"passport": {"*"}},
      *     },
-     *      @OA\Response(
-     *          response=400,
-     *          description="Bad Request"
-     *      ),
-     *      @OA\Response(
-     *          response=401,
-     *          description="Unauthenticated",
-     *      ),
-     *      @OA\Response(
-     *          response=403,
-     *          description="Forbidden"
-     *      )
-     * )
+     *  )
      */
     public function show(Project $project)
     {
