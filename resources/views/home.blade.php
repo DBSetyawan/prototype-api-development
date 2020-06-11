@@ -14,8 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                   Privacy, point access : {{ Auth::User()->email }} - {{ Auth::User()->roles[0]->title }}
                 </div>
             </div>
         </div>

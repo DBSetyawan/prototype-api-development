@@ -19,8 +19,19 @@ namespace App\Http\Controllers\Api\V1\Admin;
      *     )
      * )
      */
-
-
+    /** 
+    *     @SWG\SecurityScheme(
+    *          securityDefinition="default",
+    *          type="apiKey",
+    *          in="header",
+    *          name="Authorization"
+    *      ),
+    *     security={
+    *         {
+    *             "default": {}
+    *         }
+    *     }
+    */
   
     class Controller extends BaseController
     {

@@ -6,7 +6,7 @@ return [
         'title_singular' => 'User management',
     ],
     'permission'     => [
-        'title'          => 'Permissions',
+        'title'          => 'Prizinan akses aplikasi',
         'title_singular' => 'Permission',
         'fields'         => [
             'id'                => 'ID',
@@ -22,7 +22,7 @@ return [
         ],
     ],
     'role'           => [
-        'title'          => 'Roles',
+        'title'          => 'Peran pengguna',
         'title_singular' => 'Role',
         'fields'         => [
             'id'                 => 'ID',
@@ -40,7 +40,7 @@ return [
         ],
     ],
     'user'           => [
-        'title'          => 'Users',
+        'title'          => 'Pengguna',
         'title_singular' => 'User',
         'fields'         => [
             'id'                       => 'ID',
@@ -66,7 +66,7 @@ return [
         ],
     ],
     'project'        => [
-        'title'          => 'Projects',
+        'title'          => 'Proyek',
         'title_singular' => 'Project',
         'fields'         => [
             'id'                 => 'ID',
@@ -83,6 +83,13 @@ return [
             'updated_at_helper'  => '',
             'deleted_at'         => 'Deleted at',
             'deleted_at_helper'  => '',
+        ],
+    ],
+    'publish_api'        => [
+        'title'          => 'Dokumentasi 3PS API',
+        'title_singular' => 'Docs',
+        'fields'         => [
+            'id'                 => 'ID'
         ],
     ],
 ];
