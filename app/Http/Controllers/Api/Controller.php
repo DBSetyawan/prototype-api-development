@@ -11,12 +11,8 @@ namespace App\Http\Controllers\Api\V1\Admin;
      *     title="3PS Application api development",
      *     termsOfService="http://swagger.io/terms/",
      *     @OA\Contact(
-     *         email="admin@admin.com"
+     *         email="daniel@developer.com"
      *     ),
-     *     @OA\License(
-     *         name="Apache 2.0",
-     *         url="http://www.apache.org/licenses/LICENSE-2.0.html"
-     *     )
      * )
      */
     /** 
