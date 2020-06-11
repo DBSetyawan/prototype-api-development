@@ -92,6 +92,7 @@ class ProjectsApiController extends Controller
      *              type="integer"
      *          )
      *      ),
+     *      security={{"passport": {"*"}},
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
