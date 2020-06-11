@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', '3PS API DEVELOPMENT'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://trial-api-tigapermatasystem.herokuapp.com/api/'),
+    'url' => env('APP_URL', 'https://trial-api-tigapermatasystem.herokuapp.com'),
 
     'asset_url' => env('ASSET_URL', null),
 

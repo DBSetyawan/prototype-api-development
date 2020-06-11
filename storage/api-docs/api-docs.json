@@ -415,7 +415,7 @@
                 "type": "oauth2",
                 "description": "3PS Application oauth2 security.",
                 "in": "header",
-                "scheme": "http",
+                "scheme": "https",
                 "flows": {
                     "password": {
                         "authorizationUrl": "http://trial.api.tigapermatasystem.test/oauth/authorize",
