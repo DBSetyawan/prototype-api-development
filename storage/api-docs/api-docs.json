@@ -418,9 +418,9 @@
                 "scheme": "https",
                 "flows": {
                     "password": {
-                        "authorizationUrl": "http://trial.api.tigapermatasystem.test/oauth/authorize",
-                        "tokenUrl": "http://trial.api.tigapermatasystem.test/oauth/token",
-                        "refreshUrl": "http://trial.api.tigapermatasystem.test/token/refresh",
+                        "authorizationUrl": "https://trial-api-tigapermatasystem.herokuapp.com/oauth/authorize",
+                        "tokenUrl": "https://trial-api-tigapermatasystem.herokuapp.com/oauth/token",
+                        "refreshUrl": "https://trial-api-tigapermatasystem.herokuapp.com/token/refresh",
                         "scopes": []
                     }
                 }
