@@ -96,11 +96,13 @@ class ProjectsApiController extends Controller
      *              type="integer"
      *          )
      *      ),
-     *      @OA\Response(
+     *       @OA\Response(
      *          response=200,
      *          description="Successful operation",
      *          @OA\JsonContent(ref="#/components/schemas/Project")
      *       ),
+     *       security={{"passport": {"*"}},
+     *     },
      *      @OA\Response(
      *          response=400,
      *          description="Bad Request"
@@ -112,11 +114,7 @@ class ProjectsApiController extends Controller
      *      @OA\Response(
      *          response=403,
      *          description="Forbidden"
-     *      ),
-     *      security={
-     *              {
-     *          "passport": {"*"}},
-     *      },
+     *      )
      * )
      */
     public function show(Project $project)
