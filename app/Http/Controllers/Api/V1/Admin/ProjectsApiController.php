@@ -31,7 +31,7 @@ class ProjectsApiController extends Controller
      */
     public function index()
     {
-        abort_if(Gate::denies('project_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('project_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new ProjectResource(Project::with(['author'])->get());
     }
@@ -113,7 +113,7 @@ class ProjectsApiController extends Controller
      */
     public function show(Project $project)
     {
-        abort_if(Gate::denies('project_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('project_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new ProjectResource($project->load(['author']));
     }
@@ -207,7 +207,7 @@ class ProjectsApiController extends Controller
      */
     public function destroy(Project $project)
     {
-        abort_if(Gate::denies('project_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('project_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $project->delete();
 
