@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://trial.api.tigapermatasystem.test'),
+    'url' => env('APP_URL', 'https://trial-api-tigapermatasystem.herokuapp.com/api/'),
 
     'asset_url' => env('ASSET_URL', null),
 

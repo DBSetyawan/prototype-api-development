@@ -162,7 +162,7 @@ return [
             'type' => 'oauth2', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
             'description' => '3PS Application oauth2 security.',
             'in' => 'header',
-            'scheme' => 'http',
+            'scheme' => 'https',
             'flows' => [
                 "password" => [
                     "authorizationUrl" => config('app.url') . '/oauth/authorize',
@@ -241,6 +241,6 @@ return [
     |--------------------------------------------------------------------------
      */
     'constants' => [
-        'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://my-default-host.com'),
+        'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'https://trial-api-tigapermatasystem.herokuapp.com/api/'),
     ],
 ];
