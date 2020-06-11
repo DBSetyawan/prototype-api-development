@@ -13,10 +13,13 @@
         "darkaonline/l5-swagger": "^6.0",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
+        "fruitcake/laravel-cors": "^2.0",
+        "jakub-onderka/php-console-color": "^0.2.0",
         "laravel/framework": "^6.2",
         "laravel/passport": "^7.4",
-        "paragonie/random_compat": "2.*",
         "laravel/tinker": "^1.0",
+        "paragonie/random_compat": "2.*",
+        "php-parallel-lint/php-console-color": "^0.3.0",
         "yajra/laravel-datatables-oracle": "^9.7"
     },
     "require-dev": {

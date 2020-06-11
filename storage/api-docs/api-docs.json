@@ -5,11 +5,11 @@
         "description": "3PS API Development",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
-            "email": "admin@admin.com"
+            "email": "daniel@developer.com"
         },
         "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+            "name": "Nginx 1.19.0",
+            "url": "http://nginx.org/LICENSE"
         },
         "version": "1.0.0"
     },

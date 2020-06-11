@@ -8,6 +8,7 @@ use Laravel\Passport\Http\Middleware\CheckClientCredentials;
 class Kernel extends HttpKernel
 {
     protected $middleware = [
+        \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\TrimStrings::class,
         \App\Http\Middleware\TrustProxies::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
