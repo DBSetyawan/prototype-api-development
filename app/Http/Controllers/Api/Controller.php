@@ -21,16 +21,14 @@ namespace App\Http\Controllers\Api\V1\Admin;
      */
     /** 
     *     @SWG\SecurityScheme(
-    *          securityDefinition="default",
-    *          type="apiKey",
+    *          securityDefinition="passport",
+    *          type="oauth2",
     *          in="header",
     *          name="Authorization"
     *      ),
     *     security={
-    *         {
-    *             "default": {}
-    *         }
-    *     }
+    *       {"passport": {}},
+    *   }
     */
   
     class Controller extends BaseController
