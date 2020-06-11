@@ -92,7 +92,6 @@ class ProjectsApiController extends Controller
      *              type="integer"
      *          )
      *      ),
-     *      security={{"passport": {"*"}},
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
@@ -109,7 +108,9 @@ class ProjectsApiController extends Controller
      *      @OA\Response(
      *          response=403,
      *          description="Forbidden"
-     *      )
+     *      ),
+     *          security={{"passport": {"*"}},
+     *     },
      * )
      */
     public function show(Project $project)
