@@ -243,6 +243,6 @@ return [
     |--------------------------------------------------------------------------
      */
     'constants' => [
-        'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'https://trial-api-tigapermatasystem.herokuapp.com/api/'),
+        'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'https://trial-api-tigapermatasystem.herokuapp.com/api/documentation'),
     ],
 ];
