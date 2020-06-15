@@ -18,14 +18,14 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects",
      *      operationId="getProjectsList",
      *      tags={"Projects"},
-     *      security={{"passport": {"*"}},
+     *      security={{"passport": {}},
      *      summary="Get list of projects",
      *      description="Returns list of projects",
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
      *          @OA\JsonContent(ref="#/components/schemas/ProjectResource")
-     *       ),
+     *       )
      *  )
      */
     public function index()
