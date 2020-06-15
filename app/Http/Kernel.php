@@ -21,6 +21,7 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
             \App\Http\Middleware\AuthGates::class,
+            \App\Http\Middleware\SwaggerFix::class
         ],
         'client_credentials' => [
             CheckClientCredentials::class,
