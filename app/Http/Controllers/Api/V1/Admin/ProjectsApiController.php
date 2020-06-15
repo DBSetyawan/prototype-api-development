@@ -88,6 +88,7 @@ class ProjectsApiController extends Controller
      *      tags={"Projects"},
      *      summary="Get projects information",
      *      description="Returns projects data",
+     *      security={{"passport": {"*"}},
      *      @OA\Parameter(
      *          name="id",
      *          description="Project id",
@@ -101,8 +102,7 @@ class ProjectsApiController extends Controller
      *          response=200,
      *          description="Successful operation",
      *          @OA\JsonContent(ref="#/components/schemas/Project")
-     *       ),
-     *       security={{"passport": {"*"}},
+     *       )
      *  )
      */
     public function show(Project $project)
