@@ -79,9 +79,6 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects/{id}",
      *      operationId="getProjectsList",
      *      tags={"Projects"},
-     *      security={
-     *         {"passport": {}},
-     *      },
      *      summary="Get projects information",
      *      description="Returns projects data",
      *      @OA\Parameter(
@@ -93,6 +90,9 @@ class ProjectsApiController extends Controller
      *              type="integer"
      *          )
      *      ),
+     *     security={
+     *         {"bearerAuth": {}}
+     *     }
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",

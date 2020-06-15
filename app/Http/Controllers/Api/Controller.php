@@ -37,12 +37,12 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *         scopes={"*"}
          *     ),
          *     securityScheme="oauth2",
+         *     securityDefinition="3PS API Headers",
          *     in="header",
-         *     type="oauth2",
-         *     description="Oauth2 security",
-         *     name="basic",
-         *     scheme="https",
-         *     bearerFormat="Bearer",
+         *     type="apiKey",
+         *     description="3PS API security",
+         *     name="Authorization",
+         *     scheme="https"
          * )
          */
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
