@@ -9,7 +9,7 @@
                 <p class="text-muted">{{ trans('global.login') }}</p>
                 <span class="text-muted">Information login for developer :</span><br/>
                 <span class="text-lowercase text-muted">{{ trans('global.username') }}</span><br/>
-                <span class="text-lowercase text-muted">{{ trans('global.password') }}</span>
+                <span class="text-lowercase text-muted">{{ trans('global.password') }}</span><br/>
 
 
                 @if(session('status'))
@@ -82,11 +82,11 @@
             <h5 class="card-title">3PS API Development</h5>
             <p class="card-text">Prototype api development tiga permata sistem.</p>
             {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
-            <a href="{{ route("l5-swagger.api") }}" class="nav-link {{ request()->is('admin/api/documentation') || request()->is('admin/api/*') ? 'active' : '' }}">
+            {{-- <a href="{{ route("l5-swagger.api") }}" class="nav-link {{ request()->is('admin/api/documentation') || request()->is('admin/api/*') ? 'active' : '' }}">
                 <i class="fa-fw fas fa-bookmark nav-icon">
                 </i>
                     {{ trans('cruds.publish_api.title') }}
-            </a>
+            </a> --}}
           </div>
     </div>
 </div>
