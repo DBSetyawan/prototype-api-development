@@ -51,11 +51,10 @@ return [
                 \Illuminate\Routing\Middleware\SubstituteBindings::class,
                 \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
                 \App\Http\Middleware\SwaggerFix::class
-                // 'auth',
             ],
             'asset' => [], 
             'docs' => [],
-            'oauth2_callback' => ['https://trial-api-tigapermatasystem.herokuapp.com/api/oauth2-callback'],
+            'oauth2_callback' => ['api/oauth2-callback'],
         ],
     ],
 
