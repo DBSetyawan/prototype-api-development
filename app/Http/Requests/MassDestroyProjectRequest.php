@@ -11,7 +11,7 @@ class MassDestroyProjectRequest extends FormRequest
 {
     public function authorize()
     {
-        abort_if(Gate::denies('project_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('project_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return true;
     }
