@@ -34,14 +34,17 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *     @OA\Flow(
          *         flow="clientCredentials",
          *         tokenUrl="oauth/token",
-         *         scopes={"*"}
+         *         scopes={}
          *     ),
          *     securityScheme="bearerAuth",
          *     in="header",
          *     type="oauth2",
          *     description="3PS API security",
          *     name="Otorisasi 3PS OpenAPI",
-         *     scheme="https"
+         *     scheme="https",
+         *     security={
+         *         {"bearerAuth": {}}
+         *     }
          * )
          */
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;

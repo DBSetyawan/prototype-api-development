@@ -90,9 +90,6 @@ class ProjectsApiController extends Controller
      *              type="integer"
      *          )
      *      ),
-     *     security={
-     *         {"bearerAuth": {}}
-     *     },
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
