@@ -36,9 +36,9 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *         tokenUrl="oauth/token",
          *         scopes={"*"}
          *     ),
-         *     securityScheme="basic",
+         *     securityScheme="oauth2",
          *     in="header",
-         *     type="basic",
+         *     type="oauth2",
          *     description="Oauth2 security",
          *     name="basic",
          *     scheme="https",
