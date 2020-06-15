@@ -5,19 +5,18 @@
     <div class="col-md-6">
         <div class="card mx-4">
             <div class="card-body p-4">
-                <h1>{{ trans('panel.site_title_login') }}</h1>
-                <p class="text-muted">{{ trans('global.login') }}</p>
-                <span class="text-muted">Information login for developer :</span><br/>
-                <span class="text-lowercase text-muted">{{ trans('global.username') }}</span><br/>
-                <span class="text-lowercase text-muted">{{ trans('global.password') }}</span><br/>
-
-
+                <div class="container">
+                    <h1>{{ trans('panel.site_title_login') }}</h1>
+                    <p class="text-muted">{{ trans('global.login') }}</p>
+                    <span class="text-muted">Information login for developer :</span><br/>
+                    <span class="text-lowercase text-muted">{{ trans('global.username') }}</span><br/>
+                    <span class="text-lowercase text-muted">{{ trans('global.password') }}</span><br/>
+                </div>
                 @if(session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
                 @endif
-
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
