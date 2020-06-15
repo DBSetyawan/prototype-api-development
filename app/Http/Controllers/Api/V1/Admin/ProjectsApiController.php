@@ -48,11 +48,27 @@ class ProjectsApiController extends Controller
      *          @OA\JsonContent(ref="#/components/schemas/StoreProjectRequest")
      *      ),
      *      @OA\Response(
-     *          response=200,
+     *          response=201,
      *          description="Successful operation",
-     *          @OA\JsonContent(ref="#/components/schemas/ProjectResource")
+     *          @OA\JsonContent(ref="#/components/schemas/Project")
      *       ),
-     *       security={{"passport": {"*"}},
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      ),
+     *       security={
+     *              {
+     *          "passport": {"*"}},
+     *      },
+     * 
      * )
      */
     public function store(StoreProjectRequest $request)
@@ -87,7 +103,6 @@ class ProjectsApiController extends Controller
      *          @OA\JsonContent(ref="#/components/schemas/Project")
      *       ),
      *       security={{"passport": {"*"}},
-     *     },
      *  )
      */
     public function show(Project $project)
