@@ -38,7 +38,7 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *     ),
          *     securityScheme="bearerAuth",
          *     in="header",
-         *     type="basic",
+         *     type="oauth2",
          *     description="3PS API security",
          *     name="Otorisasi 3PS OpenAPI",
          *     scheme="https"
