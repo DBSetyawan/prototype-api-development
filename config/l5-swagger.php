@@ -53,9 +53,9 @@ return [
                 \App\Http\Middleware\SwaggerFix::class
                 // 'auth',
             ],
-            'asset' => [],
+            'asset' => [], 
             'docs' => [],
-            'oauth2_callback' => [],
+            'oauth2_callback' => ['https://trial-api-tigapermatasystem.herokuapp.com/api/oauth2-callback'],
         ],
     ],
 
