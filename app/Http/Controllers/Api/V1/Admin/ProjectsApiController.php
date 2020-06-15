@@ -41,6 +41,7 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects",
      *      operationId="storeProject",
      *      tags={"Projects"},
+     *      security={{"passport": {"*"}},
      *      summary="Store new project",
      *      description="Returns project data",
      *      @OA\RequestBody(
@@ -86,9 +87,9 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects/{id}",
      *      operationId="getProjectsList",
      *      tags={"Projects"},
+     *      security={{"passport": {"*"}},
      *      summary="Get projects information",
      *      description="Returns projects data",
-     *      security={{"passport": {"*"}},
      *      @OA\Parameter(
      *          name="id",
      *          description="Project id",
@@ -117,6 +118,7 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects/{id}",
      *      operationId="updateProject",
      *      tags={"Projects"},
+     *      security={{"passport": {"*"}},
      *      summary="Update existing project",
      *      description="Returns updated project data",
      *      @OA\Parameter(
@@ -152,11 +154,7 @@ class ProjectsApiController extends Controller
      *      @OA\Response(
      *          response=404,
      *          description="Resource Not Found"
-     *      ),
-     *      security={
-     *              {
-     *          "passport": {"*"}},
-     *      },
+     *      )
      * )
      */
     public function update(UpdateProjectRequest $request, Project $project)
@@ -173,6 +171,7 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects/{id}",
      *      operationId="deleteProject",
      *      tags={"Projects"},
+     *      security={{"passport": {"*"}},
      *      summary="Delete existing project",
      *      description="Deletes a record and returns no content",
      *      @OA\Parameter(
@@ -200,11 +199,7 @@ class ProjectsApiController extends Controller
      *      @OA\Response(
      *          response=404,
      *          description="Resource Not Found"
-     *      ),
-     *       security={
-     *              {
-     *          "passport": {"*"}},
-     *      },
+     *      )
      * )
      */
     public function destroy(Project $project)
