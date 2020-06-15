@@ -12,6 +12,7 @@
                     <span class="text-lowercase text-muted">{{ trans('global.username') }}</span><br/>
                     <span class="text-lowercase text-muted">{{ trans('global.password') }}</span><br/>
                 </div>
+                <br/>
                 @if(session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
