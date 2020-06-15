@@ -38,10 +38,10 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *     ),
          *     securityScheme="bearerAuth",
          *     in="header",
-         *     type="https",
+         *     type="basic",
          *     description="3PS API security",
-         *     name="Authorization",
-         *     scheme="bearer"
+         *     name="Otorisasi 3PS OpenAPI",
+         *     scheme="https"
          * )
          */
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
