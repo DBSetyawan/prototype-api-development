@@ -28,21 +28,21 @@ namespace App\Http\Controllers\Api\V1\Admin;
          * )
          *
         */
-        
+
         /**
          * @OA\SecurityScheme(
          *     @OA\Flow(
          *         flow="clientCredentials",
          *         tokenUrl="oauth/token",
-         *         scopes={}
+         *         scopes={"*"}
          *     ),
-         *     securityScheme="oauth2",
+         *     securityScheme="basic",
          *     in="header",
-         *     type="oauth2",
+         *     type="basic",
          *     description="Oauth2 security",
-         *     name="oauth2",
-         *     scheme="http",
-         *     bearerFormat="bearer",
+         *     name="basic",
+         *     scheme="https",
+         *     bearerFormat="Bearer",
          * )
          */
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
