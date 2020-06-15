@@ -21,9 +21,6 @@ namespace App\Http\Controllers\Api\V1\Admin;
      * @OA\Server(
      *      url=L5_SWAGGER_CONST_HOST,
      *      description="3PS OpenAPI Published",
-     *      security={
-     *          {"passport": {}},
-     *      },
      * )
      **/
   
