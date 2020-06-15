@@ -62,22 +62,22 @@
                     </a>
                 </li>
             @endcan
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a href="{{ route("l5-swagger.api") }}" class="nav-link {{ request()->is('admin/api/documentation') || request()->is('admin/api/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-bookmark nav-icon">
 
                     </i>
                     {{ trans('cruds.publish_api.title') }}
                 </a>
-            </li> --}}
-            {{-- <li class="navbar-item">
+            </li>
+            <li class="navbar-item">
                 <a href="{{ route("l5-swagger.api") }}" class="nav-link {{ request()->is('admin/api/documentation') || request()->is('admin/api/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-tasks nav-icon">
 
                     </i>
                     {{ trans('cruds.publish_api.title') }}
                 </a>
-            </li> --}}
+            </li>
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">
