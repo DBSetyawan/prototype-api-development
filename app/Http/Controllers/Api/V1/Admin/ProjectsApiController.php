@@ -35,7 +35,22 @@ class ProjectsApiController extends Controller
 
         return new ProjectResource(Project::with(['author'])->get());
     }
-
+    /**
+     * @OA\Get(
+     *      path="/api/v1/projects",
+     *      operationId="getProjectsList",
+     *      tags={"Projects"},
+     *      summary="Get list of projects",
+     *      description="Returns list of projects",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/ProjectResource")
+     *       ),
+     *       security={{"passport": {"*"}},
+     *     },
+     *  )
+     */
     /**
      * @OA\Post(
      *      path="/api/v1/projects",
