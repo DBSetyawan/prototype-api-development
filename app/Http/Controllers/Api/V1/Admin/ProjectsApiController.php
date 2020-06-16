@@ -18,6 +18,9 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects",
      *      operationId="getProjectsList",
      *      tags={"Projects"},
+     *      security={
+     *        {"passport": {}},
+     *      },
      *      summary="Get list of projects",
      *      description="Returns list of projects",
      *      @OA\Response(
@@ -25,9 +28,6 @@ class ProjectsApiController extends Controller
      *          description="Successful operation",
      *          @OA\JsonContent(ref="#/components/schemas/ProjectResource")
      *       ),
-     *      security = {
-     *          {"passport" : {"*"}
-     *      }
      *  )
      */
     public function index()
