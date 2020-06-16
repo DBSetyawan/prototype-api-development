@@ -25,6 +25,9 @@ class ProjectsApiController extends Controller
      *          description="Successful operation",
      *          @OA\JsonContent(ref="#/components/schemas/ProjectResource")
      *       ),
+     *      security = {
+     *          {"passport" : {"*"}
+     *      }
      *  )
      */
     public function index()
