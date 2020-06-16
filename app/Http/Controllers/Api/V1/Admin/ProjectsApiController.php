@@ -82,9 +82,6 @@ class ProjectsApiController extends Controller
      *      path="/api/v1/projects/{id}",
      *      operationId="getProjectsList",
      *      tags={"Projects"},
-     *      security={
-     *        {"passport": {}},
-     *      },
      *      summary="Get projects information",
      *      description="Returns projects data",
      *      @OA\Parameter(
@@ -94,7 +91,10 @@ class ProjectsApiController extends Controller
      *          in="path",
      *          @OA\Schema(
      *              type="integer"
-     *          )
+     *          ),
+     *      security={
+     *         {"passport": {}},
+     *      }
      *      ),
      *      @OA\Response(
      *          response=200,
