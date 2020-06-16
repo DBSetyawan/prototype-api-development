@@ -50,8 +50,7 @@ return [
                 \App\Http\Middleware\VerifyCsrfToken::class,
                 \Illuminate\Routing\Middleware\SubstituteBindings::class,
                 \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-                \App\Http\Middleware\SwaggerFix::class,
-                'auth'
+                \App\Http\Middleware\SwaggerFix::class
             ],
             'asset' => [], 
             'docs' => [],
