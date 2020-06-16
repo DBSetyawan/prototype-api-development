@@ -86,7 +86,7 @@ class ProjectsApiController extends Controller
      *      description="Returns projects data",
      *      security={
      *         {"BearerAuth": {}},
-     *      }
+     *      },
      *      @OA\Parameter(
      *          name="id",
      *          description="Project id",
