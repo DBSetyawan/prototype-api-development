@@ -76,33 +76,34 @@ class ProjectsApiController extends Controller
             ->setStatusCode(Response::HTTP_CREATED);
     }
 
-
-     /**
-     * @OA\Get(
-     *      path="/api/v1/projects/{id}",
-     *      operationId="getProjectsList",
-     *      tags={"Projects"},
-     *      summary="Get projects information",
-     *      description="Returns projects data",
-     *      security={
-     *         {"BearerAuth": {}},
-     *      },
-     *      @OA\Parameter(
-     *          name="id",
-     *          description="Project id",
-     *          required=true,
-     *          in="path",
-     *          @OA\Schema(
-     *              type="integer"
-     *          )
-     *      ),
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *          @OA\JsonContent(ref="#/components/schemas/Project")
-     *       )
-     *  )
-     */
+    /**
+    * @SWG\SecurityScheme(
+    *   securityDefinition="passport",
+    *   type="oauth2",
+    *   tokenUrl="/oauth/token",
+    *   flow="password",
+    *   scopes={}
+    * )
+    */
+    
+    /**
+    * @SWG\Get(
+    *      path="/api/v1/projects/{id}",
+    *      operationId="getProjectsList",
+    *      tags={"Projects"},
+    *      summary="Get projects information",
+    *      description="Returns projects data",
+    *      security={
+    *        {"passport": {}},
+    *      },
+    *      summary="Get user",
+    *      @SWG\Response(
+    *          response=200,
+    *          description="Successful operation",
+    *          @OA\JsonContent(ref="#/components/schemas/Project")
+    *   )
+    * )
+    */
     public function show(Project $project)
     {
         // abort_if(Gate::denies('project_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
