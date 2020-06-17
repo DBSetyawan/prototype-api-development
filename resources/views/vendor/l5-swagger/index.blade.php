@@ -38,8 +38,8 @@
 window.onload = function() {
   var urlToDocs = @json($urlToDocs);
   var passwordClient = @json(\Laravel\Passport\Client::where('password_client', 1)->whereNull('user_id')->first()->makeVisible('secret'));
+  ui.authActions.logout = function(payload) {
   var oldLogout = ui.authActions.logout;
-    ui.authActions.logout = function(payload) {
         window.localStorage.removeItem('token');
         return oldLogout(payload);
     };
