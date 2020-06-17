@@ -26,13 +26,6 @@ namespace App\Http\Controllers\Api\V1\Admin;
         */
 
         /**
-         * @OA\Tag(
-         *     name="shipping",
-         *     description="",
-         * )
-         */
-        
-        /**
          * @OA\SecurityScheme(
          *     @OA\Flow(
          *         flow="clientCredentials",

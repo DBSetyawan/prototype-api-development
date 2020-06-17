@@ -121,7 +121,7 @@ class ProjectsApiController extends Controller
 
     /**
      * @OA\Get(
-     *
+     *   tags={"Testing Credentials"},
      *   path="/demo",
      *   summary="Get name",
      *   @OA\Response(
