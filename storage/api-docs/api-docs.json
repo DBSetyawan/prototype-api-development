@@ -198,7 +198,7 @@
                 }
             }
         },
-        "/demo": {
+        "/api/v1/demo": {
             "get": {
                 "tags": [
                     "Testing Credentials"
