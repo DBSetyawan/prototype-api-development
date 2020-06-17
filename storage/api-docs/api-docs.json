@@ -19,6 +19,36 @@
         }
     ],
     "paths": {
+        "/mySecuredEndpoint": {
+            "get": {
+                "tags": [
+                    "Passport Security"
+                ],
+                "summary": "Secured with passport",
+                "description": "Secured with passport",
+                "responses": {
+                    "200": {
+                        "description": "My Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "default": {
+                        "description": "an \"unexpected\" error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": [
+                            "*"
+                        ]
+                    }
+                ]
+            }
+        },
         "/projects": {
             "get": {
                 "tags": [
@@ -421,20 +451,6 @@
             }
         },
         "securitySchemes": {
-            "oauth2": {
-                "type": "oauth2",
-                "description": "Oauth2 security",
-                "name": "oauth2",
-                "in": "header",
-                "flows": {
-                    "clientCredentials": {
-                        "tokenUrl": "oauth/token",
-                        "scopes": {}
-                    }
-                },
-                "bearerFormat": "bearer",
-                "scheme": "https"
-            },
             "passport": {
                 "type": "oauth2",
                 "description": "3PS Application oauth2 security.",
