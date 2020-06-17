@@ -87,6 +87,9 @@
         },
         "/demo": {
             "get": {
+                "tags": [
+                    "Testing Credentials"
+                ],
                 "summary": "Get name",
                 "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
                 "responses": {
@@ -425,11 +428,5 @@
                 }
             }
         }
-    },
-    "tags": [
-        {
-            "name": "shipping",
-            "description": ""
-        }
-    ]
+    }
 }
