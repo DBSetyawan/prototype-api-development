@@ -43,6 +43,7 @@ return [
          */
         'middleware' => [
             'api' => [
+                \App\Http\Middleware\SwaggerFix::class,
                 \App\Http\Middleware\EncryptCookies::class,
                 \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
                 \Illuminate\Session\Middleware\StartSession::class,
@@ -50,7 +51,6 @@ return [
                 \App\Http\Middleware\VerifyCsrfToken::class,
                 \Illuminate\Routing\Middleware\SubstituteBindings::class,
                 \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-                \App\Http\Middleware\SwaggerFix::class
             ],
             'asset' => [], 
             'docs' => [],

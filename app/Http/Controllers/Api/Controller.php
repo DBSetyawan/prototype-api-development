@@ -25,8 +25,14 @@ namespace App\Http\Controllers\Api\V1\Admin;
          * @OA\Server(
          *      url=L5_SWAGGER_CONST_HOST,
          *      description="3PS OpenAPI Published",
-         * )
-         *
+         * ),
+        *   @SWG\SecurityScheme(
+        *   securityDefinition="passport",
+        *   type="oauth2",
+        *   tokenUrl="/oauth/token",
+        *   flow="password",
+        *   scopes={}
+        * )
         */
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     }
