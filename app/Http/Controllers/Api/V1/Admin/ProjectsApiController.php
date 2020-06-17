@@ -76,21 +76,41 @@ class ProjectsApiController extends Controller
             ->setStatusCode(Response::HTTP_CREATED);
     }
 
-    /**
-    * @OA\Get(
-    *      path="projects/{id}",
-    *      operationId="getProjectsList",
-    *      tags={"Projects"},
-    *      summary="Get projects information",
-    *      description="Returns projects data",
-    *      summary="Get Detail projects",
-    *      @OA\Response(
-    *          response=200,
-    *          description="Successful operation",
-    *          @OA\JsonContent(ref="#/components/schemas/Project")
-    *   )
-    * )
-    */
+  /**
+     * @OA\Get(
+     *      path="/projects/{id}",
+     *      operationId="getProjectById",
+     *      tags={"Projects"},
+     *      summary="Get project information",
+     *      description="Returns project data",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="Project id",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/Project")
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     * )
+     */
     public function show(Project $project)
     {
         // abort_if(Gate::denies('project_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');

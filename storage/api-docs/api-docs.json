@@ -115,14 +115,25 @@
                 }
             }
         },
-        "projects/{id}": {
+        "/projects/{id}": {
             "get": {
                 "tags": [
                     "Projects"
                 ],
-                "summary": "Get Detail projects",
-                "description": "Returns projects data",
-                "operationId": "getProjectsList",
+                "summary": "Get project information",
+                "description": "Returns project data",
+                "operationId": "getProjectById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Project id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successful operation",
@@ -133,32 +144,18 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
                     }
                 }
-            }
-        },
-        "/demo": {
-            "get": {
-                "tags": [
-                    "Testing Credentials"
-                ],
-                "summary": "Get name",
-                "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Demos"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "/projects/{id}": {
+            },
             "put": {
                 "tags": [
                     "Projects"
@@ -247,6 +244,27 @@
                     },
                     "404": {
                         "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/demo": {
+            "get": {
+                "tags": [
+                    "Testing Credentials"
+                ],
+                "summary": "Get name",
+                "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Demos"
+                                }
+                            }
+                        }
                     }
                 }
             }
