@@ -81,6 +81,9 @@ class ProjectsApiController extends Controller
      *      path="/projects/{id}",
      *      operationId="getProjectById",
      *      tags={"Projects"},
+     *      security={
+     *        {"passport": {}},
+     *      },
      *      summary="Get project information",
      *      description="Returns project data",
      *      @OA\Parameter(
@@ -130,6 +133,9 @@ class ProjectsApiController extends Controller
      * @OA\Get(
      *   tags={"Testing Credentials"},
      *   path="/demo",
+     *   security={
+     *       {"passport": {}},
+     *   },
      *   summary="Get name",
      *   @OA\Response(
      *     response=200,
