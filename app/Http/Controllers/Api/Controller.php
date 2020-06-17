@@ -24,26 +24,6 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *      description="3PS OpenAPI Published",
          * )
         */
-
-         /**
-         * @OA\Get(
-         *   path="/mySecuredEndpoint",
-         *   summary="Secured with passport",
-         *   description="Secured with passport",
-         *   tags={"Passport Security"},
-         *   security={{"passport": {"*"}}},
-         *   @OA\Response(
-         *     @OA\MediaType(mediaType="application/json"),
-         *     response=200,
-         *     description="My Response"
-         *   ),
-         *   @OA\Response(
-         *     @OA\MediaType(mediaType="application/json"),
-         *     response="default",
-         *     description="an ""unexpected"" error"
-         *   )
-         * )
-         */
     class Controller extends BaseController
     {
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;

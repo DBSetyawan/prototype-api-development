@@ -19,36 +19,6 @@
         }
     ],
     "paths": {
-        "/mySecuredEndpoint": {
-            "get": {
-                "tags": [
-                    "Passport Security"
-                ],
-                "summary": "Secured with passport",
-                "description": "Secured with passport",
-                "responses": {
-                    "200": {
-                        "description": "My Response",
-                        "content": {
-                            "application/json": {}
-                        }
-                    },
-                    "default": {
-                        "description": "an \"unexpected\" error",
-                        "content": {
-                            "application/json": {}
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "passport": [
-                            "*"
-                        ]
-                    }
-                ]
-            }
-        },
         "/projects": {
             "get": {
                 "tags": [
@@ -267,40 +237,10 @@
                     }
                 ]
             }
-        },
-        "/demo": {
-            "get": {
-                "tags": [
-                    "Testing Credentials"
-                ],
-                "summary": "Get name",
-                "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Demos"
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "passport": []
-                    }
-                ]
-            }
         }
     },
     "components": {
         "schemas": {
-            "Demos": {
-                "description": "Return a name",
-                "type": "string"
-            },
             "Project": {
                 "title": "Project",
                 "description": "Project model",
