@@ -85,28 +85,27 @@
                 }
             }
         },
-        "/demo": {
+        "/api/v1/projects/{id}": {
             "get": {
                 "tags": [
-                    "Testing Credentials"
+                    "Projects"
                 ],
-                "summary": "Get name",
-                "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
+                "summary": "Get Detail projects",
+                "description": "Returns projects data",
+                "operationId": "getProjectsList",
                 "responses": {
                     "200": {
-                        "description": "successful operation",
+                        "description": "Successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Demos"
+                                    "$ref": "#/components/schemas/Project"
                                 }
                             }
                         }
                     }
                 }
-            }
-        },
-        "/api/v1/projects/{id}": {
+            },
             "put": {
                 "tags": [
                     "Projects"
@@ -195,6 +194,27 @@
                     },
                     "404": {
                         "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/demo": {
+            "get": {
+                "tags": [
+                    "Testing Credentials"
+                ],
+                "summary": "Get name",
+                "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Demos"
+                                }
+                            }
+                        }
                     }
                 }
             }

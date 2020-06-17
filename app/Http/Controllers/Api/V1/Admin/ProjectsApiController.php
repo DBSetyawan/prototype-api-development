@@ -77,30 +77,17 @@ class ProjectsApiController extends Controller
     }
 
     /**
-    * @SWG\SecurityScheme(
-    *   securityDefinition="passport",
-    *   type="oauth2",
-    *   tokenUrl="/oauth/token",
-    *   flow="password",
-    *   scopes={}
-    * )
-    */
-
-    /**
-    * @SWG\Get(
+    * @OA\Get(
     *      path="/api/v1/projects/{id}",
     *      operationId="getProjectsList",
     *      tags={"Projects"},
     *      summary="Get projects information",
     *      description="Returns projects data",
-    *      security={
-    *        {"passport": {}},
-    *      },
-    *      summary="Get user",
-    *      @SWG\Response(
+    *      summary="Get Detail projects",
+    *      @OA\Response(
     *          response=200,
     *          description="Successful operation",
-    *          @SWG\JsonContent(ref="#/components/schemas/Project")
+    *          @OA\JsonContent(ref="#/components/schemas/Project")
     *   )
     * )
     */
