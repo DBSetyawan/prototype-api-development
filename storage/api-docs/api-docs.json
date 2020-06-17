@@ -1,11 +1,10 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "3PS Application api development",
-        "description": "3PS API Development",
-        "termsOfService": "http://swagger.io/terms/",
+        "title": "3PS OpenAPI Documentation",
+        "description": "3PS OpenAPI publish",
         "contact": {
-            "email": "daniel@developer.com"
+            "email": "artexsdns@gmail.com"
         },
         "license": {
             "name": "Nginx 1.19.0",
@@ -13,6 +12,12 @@
         },
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "https://trial-api-tigapermatasystem.herokuapp.com/api/v1",
+            "description": "3PS OpenAPI Published"
+        }
+    ],
     "paths": {
         "/api/v1/projects": {
             "get": {
@@ -36,9 +41,7 @@
                 },
                 "security": [
                     {
-                        "passport": [
-                            "*"
-                        ]
+                        "passport": []
                     }
                 ]
             },
@@ -82,47 +85,25 @@
                 }
             }
         },
-        "/api/v1/projects/{id}": {
+        "/api/v1/demo": {
             "get": {
-                "tags": [
-                    "Projects"
-                ],
-                "summary": "Get project information",
-                "description": "Returns project data",
-                "operationId": "getProjectById",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "Project id",
-                        "required": true,
-                        "schema": {
-                            "type": "integer"
-                        }
-                    }
-                ],
+                "summary": "Get name",
+                "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",
                 "responses": {
                     "200": {
-                        "description": "Successful operation",
+                        "description": "successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Project"
+                                    "$ref": "#/components/schemas/Demos"
                                 }
                             }
                         }
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    },
-                    "401": {
-                        "description": "Unauthenticated"
-                    },
-                    "403": {
-                        "description": "Forbidden"
                     }
                 }
-            },
+            }
+        },
+        "/api/v1/projects/{id}": {
             "put": {
                 "tags": [
                     "Projects"
@@ -218,6 +199,10 @@
     },
     "components": {
         "schemas": {
+            "Demos": {
+                "description": "Return a name",
+                "type": "string"
+            },
             "Project": {
                 "title": "Project",
                 "description": "Project model",
@@ -411,6 +396,20 @@
             }
         },
         "securitySchemes": {
+            "oauth2": {
+                "type": "oauth2",
+                "description": "Oauth2 security",
+                "name": "oauth2",
+                "in": "header",
+                "flows": {
+                    "clientCredentials": {
+                        "tokenUrl": "oauth/token",
+                        "scopes": {}
+                    }
+                },
+                "bearerFormat": "bearer",
+                "scheme": "https"
+            },
             "passport": {
                 "type": "oauth2",
                 "description": "3PS Application oauth2 security.",
@@ -426,5 +425,11 @@
                 }
             }
         }
-    }
+    },
+    "tags": [
+        {
+            "name": "shipping",
+            "description": ""
+        }
+    ]
 }
