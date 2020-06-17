@@ -13,5 +13,5 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Projects
     Route::apiResource('projects', 'ProjectsApiController');
 
-    Route::get('demo', 'ProjectsApiController@demo');
+    Route::apiResource('demo', 'ProjectsApiController@demo');
 });
