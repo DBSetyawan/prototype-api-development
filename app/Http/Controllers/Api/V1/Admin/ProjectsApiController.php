@@ -112,6 +112,32 @@ class ProjectsApiController extends Controller
     }
 
     /**
+     * @OA\Schema(
+     *   schema="Demos",
+     *   type="string",
+     *   description="Return a name"
+     * )
+     */
+
+    /**
+     * @OA\Get(
+     *
+     *   path="/api/v1/demo",
+     *   summary="Get name",
+     *   @OA\Response(
+     *     response=200,
+     *     description="successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/Demos"),
+     *   )
+     * )
+     */
+
+    public function demo()
+    {
+        return ['name' => 'Peter'];
+    }
+
+    /**
      * @OA\Put(
      *      path="/api/v1/projects/{id}",
      *      operationId="updateProject",
