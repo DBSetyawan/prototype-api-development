@@ -25,20 +25,23 @@ namespace App\Http\Controllers\Api\V1\Admin;
          * )
         */
 
-        /**
-         * @OA\SecurityScheme(
-         *     @OA\Flow(
-         *         flow="clientCredentials",
-         *         tokenUrl="oauth/token",
-         *         scopes={}
-         *     ),
-         *     securityScheme="oauth2",
-         *     in="header",
-         *     type="oauth2",
-         *     description="Oauth2 security",
-         *     name="oauth2",
-         *     scheme="https",
-         *     bearerFormat="bearer",
+         /**
+         * @OA\Get(
+         *   path="/mySecuredEndpoint",
+         *   summary="Secured with passport",
+         *   description="Secured with passport",
+         *   tags={"Passport Security"},
+         *   security={{"passport": {"*"}}},
+         *   @OA\Response(
+         *     @OA\MediaType(mediaType="application/json"),
+         *     response=200,
+         *     description="My Response"
+         *   ),
+         *   @OA\Response(
+         *     @OA\MediaType(mediaType="application/json"),
+         *     response="default",
+         *     description="an ""unexpected"" error"
+         *   )
          * )
          */
     class Controller extends BaseController
