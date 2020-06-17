@@ -50,6 +50,7 @@ window.onload = function() {
 
     requestInterceptor: function(request) {
       request.headers['X-CSRF-TOKEN'] = @json(csrf_token());
+      request.headers['Authorization'] = 'Bearer ' + '{{ Cookie::get("token") }}'
       return request;
     },
 

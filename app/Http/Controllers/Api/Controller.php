@@ -24,15 +24,11 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *      description="3PS OpenAPI Published",
          * )
         */
-        
+
         /**
          * @OA\Tag(
          *     name="shipping",
          *     description="",
-         * )
-         * @OA\Server(
-         *     description="SwaggerHUB API Mocking",
-         *     url="http://api-demo.local"
          * )
          */
         
@@ -48,7 +44,7 @@ namespace App\Http\Controllers\Api\V1\Admin;
          *     type="oauth2",
          *     description="Oauth2 security",
          *     name="oauth2",
-         *     scheme="http",
+         *     scheme="https",
          *     bearerFormat="bearer",
          * )
          */
