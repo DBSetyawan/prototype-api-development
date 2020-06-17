@@ -15,7 +15,7 @@ class ProjectsApiController extends Controller
 {
     /**
      * @OA\Get(
-     *      path="/api/v1/projects",
+     *      path="/projects",
      *      operationId="getProjectsList",
      *      tags={"Projects"},
      *      security={
@@ -39,7 +39,7 @@ class ProjectsApiController extends Controller
 
     /**
      * @OA\Post(
-     *      path="/api/v1/projects",
+     *      path="/projects",
      *      operationId="storeProject",
      *      tags={"Projects"},
      *      summary="Store new project",
@@ -78,7 +78,7 @@ class ProjectsApiController extends Controller
 
     /**
     * @OA\Get(
-    *      path="/api/v1/projects/{id}",
+    *      path="projects/{id}",
     *      operationId="getProjectsList",
     *      tags={"Projects"},
     *      summary="Get projects information",
@@ -109,7 +109,7 @@ class ProjectsApiController extends Controller
     /**
      * @OA\Get(
      *   tags={"Testing Credentials"},
-     *   path="/api/v1/demo",
+     *   path="/demo",
      *   summary="Get name",
      *   @OA\Response(
      *     response=200,
@@ -126,7 +126,7 @@ class ProjectsApiController extends Controller
 
     /**
      * @OA\Put(
-     *      path="/api/v1/projects/{id}",
+     *      path="/projects/{id}",
      *      operationId="updateProject",
      *      tags={"Projects"},
      *      summary="Update existing project",
@@ -178,7 +178,7 @@ class ProjectsApiController extends Controller
 
     /**
      * @OA\Delete(
-     *      path="/api/v1/projects/{id}",
+     *      path="/projects/{id}",
      *      operationId="deleteProject",
      *      tags={"Projects"},
      *      summary="Delete existing project",
