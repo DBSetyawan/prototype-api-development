@@ -85,7 +85,7 @@ class ProjectsApiController extends Controller
     *   scopes={}
     * )
     */
-    
+
     /**
     * @SWG\Get(
     *      path="/api/v1/projects/{id}",
@@ -100,7 +100,7 @@ class ProjectsApiController extends Controller
     *      @SWG\Response(
     *          response=200,
     *          description="Successful operation",
-    *          @OA\JsonContent(ref="#/components/schemas/Project")
+    *          @SWG\JsonContent(ref="#/components/schemas/Project")
     *   )
     * )
     */
