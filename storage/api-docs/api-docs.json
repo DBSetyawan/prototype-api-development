@@ -85,7 +85,7 @@
                 }
             }
         },
-        "/api/v1/demo": {
+        "/demo": {
             "get": {
                 "summary": "Get name",
                 "operationId": "App\\Http\\Controllers\\Api\\V1\\Admin\\ProjectsApiController::demo",

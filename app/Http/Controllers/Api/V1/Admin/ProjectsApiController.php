@@ -122,7 +122,7 @@ class ProjectsApiController extends Controller
     /**
      * @OA\Get(
      *
-     *   path="/api/v1/demo",
+     *   path="/demo",
      *   summary="Get name",
      *   @OA\Response(
      *     response=200,
@@ -134,7 +134,7 @@ class ProjectsApiController extends Controller
 
     public function demo()
     {
-        return ['name' => 'Peter'];
+        return ['name' => 'Daniel'];
     }
 
     /**
